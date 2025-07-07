@@ -1,0 +1,6 @@
+# Environment Variables
+.env
+
+# Node dependencies
+node_modules/
+notification-85897-firebase-adminsdk-42uup-e12ee62b02.json

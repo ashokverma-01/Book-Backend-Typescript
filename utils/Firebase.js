@@ -7,3 +7,4 @@ const serviceAccount = JSON.parse(raw);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
+export default admin;

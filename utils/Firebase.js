@@ -1,10 +1,10 @@
 import admin from "firebase-admin";
-import fs from "fs";
 
-const raw = fs.readFileSync("./utils/firebase-adminsdk.json", "utf8");
-const serviceAccount = JSON.parse(raw);
+// ✅ Firebase JSON को env var से read करें
+const serviceAccount = JSON.parse(process.env.FIREBASE_CONFIG_JSON);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
+
 export default admin;

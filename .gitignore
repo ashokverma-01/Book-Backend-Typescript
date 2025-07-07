@@ -1,4 +1,5 @@
 # Environment Variables
+*.json
 .env
 
 # Node dependencies

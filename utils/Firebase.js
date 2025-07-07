@@ -1,9 +1,9 @@
-// utils/firebase.js
 import admin from "firebase-admin";
-import serviceAccount from "../utils/notification-85897-firebase-adminsdk-42uup-e12ee62b02.json" assert { type: "json" };
+import fs from "fs";
+
+const raw = fs.readFileSync("./utils/firebase-adminsdk.json", "utf8");
+const serviceAccount = JSON.parse(raw);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-
-export default admin;
